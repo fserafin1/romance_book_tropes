@@ -20,5 +20,5 @@ A simple Streamlit app template for you to modify!
 
 OR
 
-Follow this link: [Romance Book Tropes](romancebooktropes.streamlit.app](https://verbose-rotary-phone-69g7p99497463595g-8503.app.github.dev) 
+Follow this link: [Romance Book Tropes](romancebooktropes.streamlit.app](https://verbose-rotary-phone-69g7p99497463595g-8502.app.github.dev) 
 
