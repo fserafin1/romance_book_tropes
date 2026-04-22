@@ -20,5 +20,5 @@ A simple Streamlit app template for you to modify!
 
 OR
 
-Follow this url: romancebooktropes.streamlit.app 
+Follow this link: [Romance Book Tropes](romancebooktropes.streamlit.app) 
 
