@@ -5,10 +5,10 @@ from recommender2 import predict_tropes, load_and_train_model
 @st.cache_data
 def load_book_data():
     try:
-        df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.csv")
+        df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.zip", compression='zip')
         return df
     except FileNotFoundError:
-        st.error("Data file not found. Please ensure 'romance_books_32K.csv' is in the workspace.")
+        st.error("Data file not found. Please ensure 'romance_books_32K.zip' is in the workspace.")
         return pd.DataFrame()
 
 st.sidebar.title("💕Romance Tropes!💕")
@@ -88,7 +88,7 @@ if option == "📚Recommend a Trope":
 # Search a Book
 elif option == "🔍Search for a book":
     if df.empty:
-        st.error("Data file not found. Please ensure 'romance_books_32K.csv' is in the workspace.")
+        st.error("Data file not found. Please ensure 'romance_books_32K.zip' is in the workspace.")
         st.stop()
     
     st.sidebar.header("Filter Books")

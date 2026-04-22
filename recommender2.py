@@ -13,7 +13,7 @@ def load_and_train_model():
     from sentence_transformers import SentenceTransformer
     
     #define and load data
-    df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.csv")
+    df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.zip", compression='zip')
 
     #get trope column as it is binary rather than text
     trope_columns =df.columns[7:]
