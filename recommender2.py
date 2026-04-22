@@ -15,6 +15,9 @@ def load_and_train_model():
     #define and load data
     df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.zip", compression='zip')
 
+    # Sample a smaller subset to reduce memory and time
+    df = df.sample(n=1000, random_state=42).reset_index(drop=True)
+
     #get trope column as it is binary rather than text
     trope_columns =df.columns[7:]
 
@@ -58,7 +61,7 @@ def load_and_train_model():
     )
 
     clf = OneVsRestClassifier(
-        LGBMClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
+        LGBMClassifier(n_estimators=50, learning_rate=0.1, random_state=42)
     )
     clf.fit(X_train, y_train)
 
