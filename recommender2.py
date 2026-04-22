@@ -14,9 +14,12 @@ def load_and_train_model():
     
     #define and load data
     df = pd.read_csv("/workspaces/romance_book_tropes/romance_books_32K.zip", compression='zip')
+<<<<<<< HEAD
 
     # Sample a smaller subset to reduce memory and time
     df = df.sample(n=1000, random_state=42).reset_index(drop=True)
+=======
+>>>>>>> d9ef346ad5e4ace258c73f9fbda9ccfa8ad43870
 
     #get trope column as it is binary rather than text
     trope_columns =df.columns[7:]
